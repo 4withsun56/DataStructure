@@ -64,7 +64,7 @@ def DFS():
                 stack.push((x+1,y))
                 move+=1
         print(' 현재스택: ',stack)
-    return False
+    return False,move
 
 
 result,move=DFS()

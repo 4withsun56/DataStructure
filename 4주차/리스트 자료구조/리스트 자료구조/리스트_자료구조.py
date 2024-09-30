@@ -66,16 +66,16 @@ def myLineEditor():
             str=input("문자열을 입력하세요: ")
             filename='dic.txt'
             
-            new_str = re.sub(r"[^\uAC00-\uD7A3\u0030-\u0039a-zA-Z\s]", "", str) 
-            word_list=new_str.split()
+            new_str = re.sub(r"[^\uAC00-\uD7A3\u0030-\u0039a-zA-Z\s]", "", str) #특수기호 단어에서 제외
+            word_list=new_str.split() #단어 공백으로 구분
             word_count={}
             for word in word_list:
                 if word in word_count:
                     word_count[word]+=1
                 else:
                     word_count[word]=1
-            with open(filename,"w")as outfile:
-                for word, count in word_count.items():
+            with open(filename,"w") as outfile:
+                for word,count in word_count.items():
                     outfile.write(f"{word}: {count}\n")
 
 
