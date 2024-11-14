@@ -130,7 +130,7 @@ print('[탐색 일칠]:','성공' if map.searchValue("일칠")!=None else '실�
 
 map.delete(3)
 map.display("[삭제 3]:",'1') #중위순회
-map.delete(3)
+map.delete(30)
 map.display("[삭제 30]:",'2')#전위순회
-map.delete(3)
+map.delete(68)
 map.display("[삭제 68]:",'3')#후위순회
